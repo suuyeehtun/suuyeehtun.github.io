@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Page</title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./jquery3.6.0.js"></script>
+    <link rel="stylesheet" href="./game.css" />
+    <link rel="stylesheet" href="./background.css" />
+    <script src="./game.js" defer></script>
+
+    <!-- Heart icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class="navbar">
+      <!-- row1 -->
+      <div class="row1">
+        <!-- three Heart -->
+        <div class="heart">
+          <!-- player lives -->
+          <div><ion-icon name="heart" class="live1"></ion-icon></div>
+          <div><ion-icon name="heart" class="live2"></ion-icon></div>
+          <div><ion-icon name="heart" class="live3"></ion-icon></div>
+
+          <!--  lost lives -->
+          <div><ion-icon name="heart-outline" class="lost1"></ion-icon></div>
+          <div><ion-icon name="heart-outline" class="lost2"></ion-icon></div>
+          <div><ion-icon name="heart-outline" class="lost3"></ion-icon></div>
+        </div>
+        <!-- Timer -->
+        <div class="timer">Timer: <span id="timer"></span></div>
+        <!-- Score -->
+        <div class="score">Score: <span id="score"></span></div>
+      </div>
+    </div>
+    <!-- canvas -->
+    <div class="canvas">
+      <canvas id="canvasForBox" width="450" height="450"></canvas>
+      <div id="wood_block"></div>
+    </div>
+
+    <!-- result show -->
+    <div id="box">
+      <img src="./image/happy.png" alt="smile" id="win" />
+      <img src="./image/sadImage.png" alt="sad" id="lose" />
+      <div id="result"></div>
+      <div id="restartbtn">
+        <img src="./image/restart.png" alt="restart" title="Restart" />
+      </div>
+    </div>
+    <audio src="./audio/warning.mp3" id="warning-sound"></audio>
+    <audio src="./audio/gameOver.mp3" id="gameOver"></audio>
+    <audio src="./audio/winSound.wav" id="gameWin"></audio>
+    <audio src="./audio/gamemusic.mp3" id="gameMusic" loop></audio>
+    <!-- menu -->
+    <span id="menubar">
+      <div>
+        <ion-icon name="menu-outline" id="menu"></ion-icon>
+        <div id="hoverText">MENU</div>
+      </div>
+
+      <div id="setting">
+        <!-- history button -->
+        <div id="historyBtn">History</div>
+        <div id="history"></div>
+        <!-- history button -->
+        <div id="homeBtn">Home</div>
+        <!-- help button -->
+        <div id="helpBtn">Help</div>
+        <!-- choose Charater Btn -->
+        <div id="charaterBtn">Characters</div>
+        <!-- play sound-->
+        <div id="soundBtn">
+          <ion-icon name="volume-high-outline" id="play_sound"></ion-icon>
+          <!-- mute sound-->
+          <ion-icon name="volume-mute-outline" id="mute_sound"></ion-icon>
+        </div>
+      </div>
+    </span>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  </body>
+</html>

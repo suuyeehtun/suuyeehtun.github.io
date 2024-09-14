@@ -1,0 +1,171 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fascinate Inline", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/*Start Splash Screen */
+#splash-screen {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+  background-color: white;
+}
+/*End Splash Screen */
+
+/*Start maze.gif */
+.maze-image {
+  position: relative;
+  height: 20%;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: 5px solid white;
+}
+
+.welcome-text {
+  font-size: 15px;
+  color: white;
+  position: absolute;
+  top: 55%;
+}
+/*End maze.gif */
+
+/*Start Home Page */
+#home-page {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./image/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+/*End Home Page */
+
+/* Twinkle Effect */
+#home-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(
+      gold,
+      rgba(255, 255, 255, 0.2) 1px,
+      transparent 2px
+    ),
+    radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+  animation: twinkle-effect 4s linear infinite;
+}
+
+@keyframes twinkle-effect {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/*Start Signboard */
+.start-signboard {
+  position: absolute;
+  top: 75%;
+  right: -20%;
+  transform: rotateY(-60deg);
+  transition: transform 0.3s ease;
+}
+
+.start-signboard a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.start-signboard img {
+  width: 70%;
+  height: auto;
+}
+
+.start-signboard a span {
+  position: absolute;
+  top: 11%;
+  left: 25%;
+  font-size: 45px;
+  font-weight: bold;
+  color: black;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px black;
+}
+/*End Signboard */
+
+/* Media query for mobile screens */
+@media screen and (max-width: 768px) {
+  .start-signboard {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 300px;
+  }
+
+  #home-page {
+    background-size: 215% auto;
+  }
+
+  .start-signboard a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d18125;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+
+  .start-signboard a:hover {
+    background-color: #a08845;
+  }
+
+  .start-signboard img {
+    display: none;
+  }
+
+  .start-signboard a span {
+    position: static;
+    font-size: 20px;
+    color: white;
+    text-shadow: 4px 4px 5px black;
+  }
+}

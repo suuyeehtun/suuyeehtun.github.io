@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./home.css" rel="stylesheet" />
+    <script src="./home.js" type="text/javascript" defer></script>
+  </head>
+  <body>
+    <!-- Splash Screen -->
+    <div id="splash-screen" onclick="clickScreen()">
+      <img src="./image/maze.gif" class="maze-image" alt="maze" />
+      <span class="welcome-text">Click to feed me!</span>
+    </div>
+    <!-- Home Page -->
+    <div id="home-page" class="hidden">
+      <audio id="birds-sound" src="./audio/birdsinging.mp3" loop></audio>
+      <div class="start-signboard">
+        <a href="./help.html">
+          <span>Start</span>
+          <img src="./image/signboard.png" alt="signboard" />
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
